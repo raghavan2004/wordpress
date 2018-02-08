@@ -137,8 +137,6 @@ read -e dbtable
     dbtable=${dbtable:-wp_}
 
 apt-get update >>$LOGFILE 2>>$ERRORFILE
-
-if check_install pv; then echo -e "pv already installed"; else install_package pv; fi
 if check_install nginx; then echo -e "Nginx already installed"; else install_package nginx; fi
 echo
 if check_install mysql-community-server; then echo -e "MySQL Server already installed"; else install_mysql; fi
