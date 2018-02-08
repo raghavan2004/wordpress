@@ -164,7 +164,7 @@ if [ "$setupmysql" == y ] ; then
 fi
 sed -i "s/^\(127.0.0.1.*\)$/\1 $domain/" /etc/hosts
 wget http://wordpress.org/latest.tar.gz
-tar xzvf latest.tar.gz
+tar xzf latest.tar.gz
 echo -e "Configuring wordpress..."
 mkdir -p /var/www/wordpress
 cp -a wordpress/. /var/www/wordpress
