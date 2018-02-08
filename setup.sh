@@ -201,7 +201,7 @@ server {
     try_files \$uri \$uri/ /index.php?q=\$uri&\$args;
   }
 
-  location ~ .php$ {
+  location ~ \.php\$ {
     try_files \$uri =404;
     fastcgi_split_path_info ^(.+.php)(/.+)$;
     fastcgi_pass unix:/run/php/php7.0-fpm.sock;
