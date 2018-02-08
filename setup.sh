@@ -136,14 +136,12 @@ echo -e -n "WP Database Table Prefix [numbers, letters, and underscores only] (E
 read -e dbtable
     dbtable=${dbtable:-wp_}
 
+apt-get update >>$LOGFILE 2>>$ERRORFILE
 
 if check_install pv; then echo -e "pv already installed"; else install_package pv; fi
 if check_install nginx; then echo -e "Nginx already installed"; else install_package nginx; fi
 echo
 if check_install mysql-community-server; then echo -e "MySQL Server already installed"; else install_mysql; fi
-
-apt-get update >>$LOGFILE 2>>$ERRORFILE
-
 for i in php7.0-fpm php-fpm php-mysql; do
     if check_install $i; then 
         echo -e "[${Gre}NOTICE${RCol}]  $i already installed"
