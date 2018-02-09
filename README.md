@@ -1,15 +1,15 @@
 # wordpress Installation
 This script will set up a WordPress
 
-Assignment
+# Assignment
 
 In this assigment we are setup WordPress using automation script
 
-#Usage
+# Usage
 
 bash setup.sh [OPTIONS]...
 
-Examples
+# Examples
 
 This will print Help.
 
