@@ -1,5 +1,5 @@
 # wordpress Installation
-This script will set up a WordPress
+This script will setup a WordPress
 
 # Assignment
 
